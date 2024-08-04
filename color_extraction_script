@@ -5,6 +5,9 @@ from colorthief import ColorThief
 import csv
 import time
 
+# This script is not used, only used if analyzing 1 movie at a time, better to use the second script.
+# This script can process one movie at a time,
+
 def extract_dominant_colors(image_path, num_colors=10):
     try:
         color_thief = ColorThief(image_path)
