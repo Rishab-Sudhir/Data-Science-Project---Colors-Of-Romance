@@ -100,7 +100,8 @@ def extract_and_queue_frames(video_path, output_dir, frame_queue, scene_threshol
 
 # Automating the process
 def process_movies_in_directory(movies_dir, output_base_dir, scene_threshold=0.3):
-    movie_files = sorted([f for f in os.listdir(movies_dir) if f.endswith(('.mp4', '.mkv', '.avi'))])
+    # Mac OS sometimes creates hidden metadata files like '._1.mp4' so added an extra filter to deal with that
+    movie_files = sorted([f for f in os.listdir(movies_dir) if f.endswith(('.mp4', '.mkv', '.avi')) and not f.startswith('._')])
     
     for i, movie_file in enumerate(movie_files, start=1):
         video_path = os.path.join(movies_dir, movie_file)
@@ -125,7 +126,7 @@ def process_movies_in_directory(movies_dir, output_base_dir, scene_threshold=0.3
         print(f"Finished processing movie {i}/{len(movie_files)}: {movie_file}")
 
 if __name__ == "__main__":
-    movies_dir = '/Volumes/Expansion/English-Movies'
-    output_base_dir = '/Users/rsudhir/Documents/GitHub/Data-Science-Project---Colors-Of-Romance/English-Movie-CSVs'
+    movies_dir = '/Volumes/Expansion/Hindi-Movies'
+    output_base_dir = '/Users/rsudhir/Documents/GitHub/Data-Science-Project---Colors-Of-Romance/Hindi-Analysis/Hindi-Movie-CSVs'
 
     process_movies_in_directory(movies_dir, output_base_dir, scene_threshold=0.4)

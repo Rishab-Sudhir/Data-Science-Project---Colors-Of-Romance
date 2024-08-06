@@ -47,7 +47,7 @@ def process_remaining_frames(movie_index, frame_dir, csv_file, num_colors=10):
             print(f"Failed to process {local_frame_path}: {e}")
 
 if __name__ == "__main__":
-    base_dir = '/Users/rsudhir/Documents/GitHub/Data-Science-Project---Colors-Of-Romance/English-Movie-CSVs'  
+    base_dir = '/Users/rsudhir/Documents/GitHub/Data-Science-Project---Colors-Of-Romance/Hindi-Analysis/Hindi-Movie-CSVs'  
 
     for movie_index in range(1, 26):  # Assuming you have 25 movies
         frame_dir = os.path.join(base_dir, f"movie_{movie_index}_frames")
