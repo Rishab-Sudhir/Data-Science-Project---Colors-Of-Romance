@@ -126,7 +126,7 @@ def process_movies_in_directory(movies_dir, output_base_dir, scene_threshold=0.3
         print(f"Finished processing movie {i}/{len(movie_files)}: {movie_file}")
 
 if __name__ == "__main__":
-    movies_dir = '/Volumes/Expansion/Hindi-Movies'
-    output_base_dir = '/Users/rsudhir/Documents/GitHub/Data-Science-Project---Colors-Of-Romance/Hindi-Analysis/Hindi-Movie-CSVs'
+    movies_dir = '/Volumes/Expansion/Korean-Movies'
+    output_base_dir = '/Users/rsudhir/Documents/GitHub/Data-Science-Project---Colors-Of-Romance/Korean-Analysis/Korean-Movie-CSVs'
 
     process_movies_in_directory(movies_dir, output_base_dir, scene_threshold=0.4)
